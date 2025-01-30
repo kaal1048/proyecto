@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una carta especial para ti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fase 1: Mensaje inicial -->
+    <div class="fase fase-1 activa" aria-live="polite">
+        <h1>¡Hola! 👋</h1>
+        <p>Tienes una nueva carta especial esperándote.</p>
+        <button id="abrirCarta" aria-label="Abrir carta">Abrir carta</button>
+    </div>
+
+    <!-- Fase 2: La carta -->
+    <div class="fase fase-2" aria-live="polite">
+        <h1>¿Quieres ser mi San Valentín? ❤️</h1>
+        <p>Eres la persona más especial para mí y me harías muy feliz si aceptas.</p>
+        <img class="ramo" src="assets/ramo.jpg" alt="Foto de nosotros" loading="lazy">
+        <div class="botones">
+            <button id="aceptar" aria-label="Aceptar">Sí, quiero ❤️</button>
+            <button id="moverNo" aria-label="No">No 😢</button>
+        </div>
+    </div>
+
+    <!-- Fase 3: Mensaje final -->
+    <div class="fase fase-3" aria-live="polite">
+        <h1>¡Sabía que dirías que sí! 🎉</h1>
+        <p>Te amo y te espero el 14, cariño 💛</p>
+        <div class="audio">
+            <audio id="audio" controls>
+                <source src="assets/audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
